@@ -2,8 +2,15 @@
 
 Kobitoをちょっぴり便利にするCLIツール
 
+![](https://raw2.github.com/suin/kobito-cli/master/image.png)
+
 ## インストール
 
+wgetで入れるだけ
+
+```
+wget -O /usr/local/bin/kobito https://github.com/suin/kobito-cli/raw/master/bin/kobito
+```
 
 
 ## 使い方
@@ -62,6 +69,3 @@ make mem
 
 make mem ARGS="show 123"
 ```
-
-
-
