@@ -2,9 +2,11 @@ package main
 
 import (
 	. "github.com/spf13/cobra"
+	"html"
 	"io/ioutil"
 	"os"
 	"os/exec"
+	"regexp"
 	"strconv"
 )
 
@@ -28,10 +30,13 @@ func cmdPrint(rootCmd *Command) {
 			failOnError(err)
 
 			// HTML に印刷JSを埋め込む
-			html := item.Html + `<script>window.print();</script>`
+			itemHtml := item.Html + `<script>window.print();</script>`
+
+			// タイトルを変更する
+			itemHtml = regexp.MustCompile("<title>.*</title>").ReplaceAllString(itemHtml, "<title>"+html.EscapeString(item.Title)+"</title>")
 
 			// HTML を書き込む
-			ioutil.WriteFile(tempDir+"/index.html", []byte(html), os.ModePerm)
+			ioutil.WriteFile(tempDir+"/index.html", []byte(itemHtml), os.ModePerm)
 
 			// CSS などをコピーする
 			assets := []string{
