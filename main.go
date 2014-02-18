@@ -27,5 +27,6 @@ func main() {
 	cmdPrint(rootCmd)
 	cmdLink(rootCmd)
 	cmdVersion(rootCmd)
+	cmdPdf(rootCmd)
 	rootCmd.Execute()
 }
