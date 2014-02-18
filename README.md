@@ -23,13 +23,14 @@ Usage:
   kobito [command]
 
 Available Commands: 
-  ls                        :: List all items
-  show [item id]            :: Show item
-  html [item id]            :: Show item as HTML
-  print [item id]           :: Print out item
-  link [markdown file]      :: Link markdown file to Kobito
-  version                   :: Print kobito cli tools version
-  help [command]            :: Help about any command
+  ls                                            :: List all items
+  show [item id]                                :: Show item
+  html [item id]                                :: Show item as HTML
+  print [item id]                               :: Print out item
+  link [markdown file]                          :: Link markdown file to Kobito
+  version                                       :: Print kobito cli tools version
+  pdf [item id] | pdf [item id] [pdf file name] :: Save item as PDF
+  help [command]                                :: Help about any command
 
 
 Use "kobito help [command]" for more information about that command.
