@@ -6,10 +6,17 @@ Kobitoをちょっぴり便利にするCLIツール
 
 ## インストール
 
-wgetで入れるだけ
+### Homebrewで入れる方法
+
+```
+brew install --HEAD https://raw.github.com/suin/kobito-cli/master/homebrew/kobito-cli.rb
+```
+
+### wgetで入れる方法
 
 ```
 wget -O /usr/local/bin/kobito https://github.com/suin/kobito-cli/raw/master/bin/kobito
+chmod +x /usr/local/bin/kobito
 ```
 
 
