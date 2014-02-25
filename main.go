@@ -28,5 +28,6 @@ func main() {
 	cmdLink(rootCmd)
 	cmdVersion(rootCmd)
 	cmdPdf(rootCmd)
+	cmdPassword(rootCmd)
 	rootCmd.Execute()
 }
