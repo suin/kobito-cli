@@ -47,6 +47,25 @@ Use "kobito help [command]" for more information about that command.
 </usage>
 
 
+### Kobito へ文字列を送信する
+
+パイプやリダイレクトなどで入力を渡すとKobitoのエントリーになります
+
+historyの5件からKobitoのエントリーを作る
+
+```
+history | tail -n 5 | kobito
+```
+
+main.goのソースコードでKobitoのエントリーを作る
+
+```
+kobito < main.go
+```
+
+「[Ruby - ターミナルから Kobito へ文字列を送信する - Qiita](http://qiita.com/watson1978/items/c6ad9417298367aa9b9b)」を参考にしました。
+
+
 ## コントリビュート
 
 go1.2をbrewでインストールしておいてください
