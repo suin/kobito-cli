@@ -12,7 +12,7 @@ func cmdPassword(rootCmd *Command) {
 		Short: "Show Kobito password",
 		Long:  "Show Kobito password",
 		Run: func(cmd *Command, args []string) {
-			output, _ := exec.Command("sudo", "security", "find-internet-password", "-w", "-s", "com.qiita").Output()
+			output, _ := exec.Command("security", "find-internet-password", "-w", "-s", "com.qiita").Output()
 			fmt.Printf("%s", output)
 		},
 	})
