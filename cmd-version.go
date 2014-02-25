@@ -15,7 +15,7 @@ func cmdVersion(rootCmd *Command) {
 		Short: "Print kobito cli tools version",
 		Long:  "Print kobito cli tools version",
 		Run: func(cmd *Command, args []string) {
-			fmt.Println("kobito clit tools version " + KOBITO_CLI_VERSION)
+			fmt.Println("kobito cli tools version " + KOBITO_CLI_VERSION)
 		},
 	})
 }
