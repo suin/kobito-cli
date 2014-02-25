@@ -20,6 +20,7 @@ func fatal(message interface{}) {
 }
 
 func main() {
+	processStdin()
 	rootCmd := &cobra.Command{Use: "kobito"}
 	cmdLs(rootCmd)
 	cmdShow(rootCmd)
