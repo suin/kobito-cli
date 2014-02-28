@@ -4,8 +4,8 @@
 import commands
 import os
 
-kobito_completion_file = os.path.dirname(__file__) + "/_kobito"
-kobito_command = os.path.dirname(__file__) + "/../bin/kobito"
+kobito_completion_file = os.path.dirname(__file__) + "/zsh-completions/_kobito"
+kobito_command = os.path.dirname(__file__) + "/bin/kobito"
 
 def main():
 	help = get_kobito_help()
