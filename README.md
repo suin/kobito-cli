@@ -38,6 +38,7 @@ Available Commands:
   version                                       :: Print kobito cli tools version
   pdf [item id] | pdf [item id] [pdf file name] :: Save item as PDF
   password                                      :: Show Kobito password
+  sticker                                       :: Do you want Kobito sticker?
   help [command]                                :: Help about any command
 
 
