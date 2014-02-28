@@ -30,5 +30,6 @@ func main() {
 	cmdVersion(rootCmd)
 	cmdPdf(rootCmd)
 	cmdPassword(rootCmd)
+	cmdSticker(rootCmd)
 	rootCmd.Execute()
 }
