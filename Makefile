@@ -21,5 +21,9 @@ build: fmt
 	# README の使い方を更新する
 	perl -pi -e "BEGIN{undef $$/;} s#<usage>.*?</usage>#<usage>\n\n\`\`\`\n$$(./bin/kobito help 2>&1)\n\`\`\`\n\n</usage>#s"  README.md
 
+	# zsh completionを更新する
+	./zsh-completions/generate-completion-file.py
+
 install: build
 	cp bin/* /usr/local/bin/
+	test -d /usr/local/share/zsh-completions/ && cp zsh-completions/* /usr/local/share/zsh-completions/

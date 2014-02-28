@@ -1,0 +1,27 @@
+#compdef kobito
+
+_kobito() {
+  local -a subcommands
+  subcommands=(
+    'ls:List all items'
+    'show:Show item'
+    'html:Show item as HTML'
+    'print:Print out item'
+    'link:Link markdown file to Kobito'
+    'version:Print kobito cli tools version'
+    'pdf:Save item as PDF'
+    'password:Show Kobito password'
+    'sticker:Do you want Kobito sticker?'
+    'help:Help about any command'
+  )
+
+  if (( CURRENT == 2 )); then
+    _describe -t commands 'subcommand' subcommands
+  else
+  	_files
+  fi
+
+  return 0
+}
+
+_kobito
