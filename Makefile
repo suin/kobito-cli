@@ -27,3 +27,13 @@ build: fmt
 install: build
 	cp bin/* /usr/local/bin/
 	test -d /usr/local/share/zsh/site-functions/ && cp zsh-completions/* /usr/local/share/zsh/site-functions/
+
+uninstall:
+	rm -f /usr/local/bin/kobito
+	test -d /usr/local/share/zsh/site-functions/ && rm -f /usr/local/share/zsh/site-functions/_kobito
+
+brew-install-test:
+	brew install --HEAD homebrew/kobito-cli.rb
+
+brew-uninstall:
+	brew uninstall --HEAD homebrew/kobito-cli.rb

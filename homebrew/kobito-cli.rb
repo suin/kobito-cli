@@ -5,6 +5,7 @@ class KobitoCli < Formula
   head 'https://github.com/suin/kobito-cli.git'
 
   def install
+    zsh_completion.install 'zsh-completions/_kobito' => '_kobito'
     bin.install Dir['bin/*']
   end
 end
