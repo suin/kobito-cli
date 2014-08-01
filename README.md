@@ -9,7 +9,8 @@ Kobitoをちょっぴり便利にするCLIツール
 ### Homebrewで入れる方法
 
 ```
-brew install --HEAD https://raw.github.com/suin/kobito-cli/master/homebrew/kobito-cli.rb
+brew tap suin/suin
+brew install kobito-cli
 ```
 
 Homebrewで入れるとzsh用の補完関数も入ります。
