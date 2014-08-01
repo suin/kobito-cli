@@ -13,7 +13,7 @@ build: fmt
 	# バージョンをつける
 	sed -i '' -e "s/__KOBITO_CLI_VERSION__/$$(git rev-parse HEAD)/g" cmd-version.go
 
-	go build -o bin/kobito port-sqlite3-*.go cmd-*go model.go main.go
+	go build -o bin/kobito port-sqlite3-*.go cmd-*go model.go kobito-discovery.go main.go
 
 	# 元に戻す
 	sed -i '' -e "s/$$(git rev-parse HEAD)/__KOBITO_CLI_VERSION__/g" cmd-version.go
