@@ -1,10 +1,10 @@
 # SQLite結合テスト用
 run: fmt
-	go run port-sqlite3-*.go cmd-*go model.go main.go ${ARGS}
+	go run port-sqlite3-*.go cmd-*go model.go kobito-discovery.go main.go ${ARGS}
 
 # デバッグ用
 mem: fmt
-	go run port-memory-*.go cmd-*go model.go main.go ${ARGS}
+	go run port-memory-*.go cmd-*go model.go kobito-discovery.go main.go ${ARGS}
 
 fmt:
 	go fmt ./...

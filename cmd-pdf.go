@@ -38,8 +38,11 @@ func cmdPdf(rootCmd *Command) {
 				"markdown.css",
 			}
 
+			kobitoPath, err := kobitoPath()
+			failOnError(err)
+
 			for _, asset := range assets {
-				err := os.Symlink("/Applications/Kobito.app/Contents/Resources/"+asset, tempDir+"/"+asset)
+				err := os.Symlink(kobitoPath+"/Contents/Resources/"+asset, tempDir+"/"+asset)
 				failOnError(err)
 			}
 
