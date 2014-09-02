@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"strconv"
+	"strings"
 )
 
 func cmdPdf(rootCmd *Command) {
@@ -52,7 +53,7 @@ func cmdPdf(rootCmd *Command) {
 			if len(args) >= 2 {
 				pdfFilename = args[1]
 			} else {
-				pdfFilename = item.Title + ".pdf"
+				pdfFilename = strings.Replace(item.Title, "/", ":", -1) + ".pdf"
 			}
 
 			pdfFile, err := os.OpenFile(pdfFilename, os.O_WRONLY|os.O_CREATE, 0600)

@@ -22,7 +22,7 @@ func (this *OnMemoryItemRepository) Items() (items []*Item, err error) {
 }
 
 func (this *OnMemoryItemRepository) ItemOfId(id int) (item *Item, err error) {
-	item = NewItem(345, "Go言語のクロスコンパイル設定値 $GOOS, $GOARCH 一覧リスト", `<!DOCTYPE HTML>
+	item = NewItem(345, "Go言語のクロスコンパイル設定値/$GOOS,/$GOARCH/一覧リスト", `<!DOCTYPE HTML>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
