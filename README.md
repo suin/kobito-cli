@@ -33,17 +33,19 @@ Usage:
   kobito [command]
 
 Available Commands: 
-  ls                                            :: List all items
-  show [item id]                                :: Show item
-  html [item id]                                :: Show item as HTML
-  print [item id]                               :: Print out item
-  link [markdown file]                          :: Link markdown file to Kobito
-  version                                       :: Print kobito cli tools version
-  pdf [item id] | pdf [item id] [pdf file name] :: Save item as PDF
-  password                                      :: Show Kobito password
-  sticker                                       :: Do you want Kobito sticker?
-  help [command]                                :: Help about any command
+  ls                                            List all items
+  show [item id]                                Show item
+  html [item id]                                Show item as HTML
+  print [item id]                               Print out item
+  link [markdown file]                          Link markdown file to Kobito
+  version                                       Print kobito cli tools version
+  pdf [item id] | pdf [item id] [pdf file name] Save item as PDF
+  password                                      Show Kobito password
+  sticker                                       Do you want Kobito sticker?
+  help [command]                                Help about any command
 
+ Available Flags:
+      --help=false: help for kobito
 
 Use "kobito help [command]" for more information about that command.
 ```
