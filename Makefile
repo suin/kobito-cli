@@ -19,10 +19,10 @@ build: fmt
 	sed -i '' -e "s/$$(git rev-parse HEAD)/__KOBITO_CLI_VERSION__/g" cmd-version.go
 
 	# README の使い方を更新する
-	perl -pi -e "BEGIN{undef $$/;} s#<usage>.*?</usage>#<usage>\n\n\`\`\`\n$$(./bin/kobito help 2>&1)\n\`\`\`\n\n</usage>#s"  README.md
+	# perl -pi -e "BEGIN{undef $$/;} s#<usage>.*?</usage>#<usage>\n\n\`\`\`\n$$(./bin/kobito help 2>&1)\n\`\`\`\n\n</usage>#s"  README.md
 
 	# zsh completionを更新する
-	./zsh-completions-generator.py
+	# ./zsh-completions-generator.py
 
 install: build
 	cp bin/* /usr/local/bin/
