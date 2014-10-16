@@ -17,7 +17,6 @@ func kobitoPath() (path string, err error) {
 	}
 
 	for _, path = range lookUpPaths {
-		println(path)
 		if directoryExists(path) {
 			return
 		}
