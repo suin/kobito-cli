@@ -22,7 +22,7 @@ func (this *SqliteItemRepository) Items() (items []*Item, err error) {
 	}
 	defer db.Close()
 
-	rows, err := db.Query("select Z_PK, ZTITLE, ZBODY, ZRAW_BODY from ZITEM order by ZUPDATED_AT desc")
+	rows, err := db.Query("select Z_PK, ZTITLE, ZBODY, ZRAW_BODY from ZITEM where ZIN_TRASH is null order by ZUPDATED_AT desc")
 
 	if err != nil {
 		return
